@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean_architecture_bloc/app/base_view.dart';
+import 'package:flutter_clean_architecture_bloc/app/messages/app_messages.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_event.dart';
@@ -19,12 +19,12 @@ class AuthPage extends BaseView{
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         APPAuthField(
-          hintText: 'Username',
+          hintText: APPMessages.userHint,
           controller: BlocProvider.of<AuthBloc>(context).emailController,
           key: const Key('username-field'),
         ),
         APPAuthField(
-          hintText: 'Password',
+          hintText: APPMessages.password,
           controller: BlocProvider.of<AuthBloc>(context).passwordController,
           obscureText: true,
           key: const Key('password-field'),
@@ -45,7 +45,7 @@ class AuthPage extends BaseView{
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
                   content: Text(
-                    'User logged in successfully',
+                    APPMessages.loginOkMsg,
                   ),
                 ),
               );
@@ -75,7 +75,7 @@ class AuthPage extends BaseView{
                   );
                 },
                 child: const Text(
-                  'Login',
+                  APPMessages.login,
                 ),
               ),
             );

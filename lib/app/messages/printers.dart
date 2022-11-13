@@ -4,6 +4,6 @@ void realDebugPrint(final dynamic message) {
   if (kDebugMode) {
     debugPrint('$message');
   } else {
-    print('$message');
+    realDebugPrint('$message');
   }
 }

@@ -7,8 +7,8 @@ part 'user_model.freezed.dart';
 part 'user_model.g.dart';
 
 @freezed
-class UserModel with _$UserModel {
-  const factory UserModel({
+class UserModelAuth with _$UserModelAuth {
+  const factory UserModelAuth({
     @Default(0) int id,
     @Default('') String username,
     @Default('') String password,
@@ -18,8 +18,8 @@ class UserModel with _$UserModel {
     @Default('') String gender,
     @Default('') String image,
     @Default('') String token,
-  }) = _UserModel;
+  }) = _UserModelAuth;
 
-  factory UserModel.fromJson(Map<String, dynamic> json) =>
-      _$UserModelFromJson(json);
+  factory UserModelAuth.fromJson(Map<String, dynamic> json) =>
+      _$UserModelAuthFromJson(json);
 }

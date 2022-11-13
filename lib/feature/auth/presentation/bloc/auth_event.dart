@@ -5,5 +5,5 @@ part 'auth_event.freezed.dart';
 
 @freezed
 class AuthEvent with _$AuthEvent {
-  const factory AuthEvent.onLoginTapped({required User user}) =LoginUserEvent;
+  const factory AuthEvent.onLoginTapped({required UserModel user}) =LoginUserEvent;
 }

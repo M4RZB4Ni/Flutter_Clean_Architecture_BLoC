@@ -1,4 +1,4 @@
-import 'package:flutter_clean_architecture_bloc/app/storage_service.dart';
+import 'package:flutter_clean_architecture_bloc/app/global_data/storage_service.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
 import 'package:get/get.dart';
 
@@ -20,16 +20,16 @@ class AuthStorageService extends GetxController{
     if (token == null) return null;
     return token;
   }
-  Future<void> saveUserModel<User>(User user) async {
+  Future<void> saveUserModel<UserModel>(UserModel user) async {
     await _storage.write(_userKey, user);
   }
 
-  User? getUserModel() {
+  UserModel? getUserModel() {
     var user = _storage.read<Map<String, dynamic>>(_userKey)
     as Map<String, dynamic>?;
 
     if (user == null) return null;
-    return User.fromJson(user);
+    return UserModel.fromJson(user);
   }
 
   void removeAll()

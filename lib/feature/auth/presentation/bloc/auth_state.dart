@@ -10,5 +10,5 @@ class AuthState with _$AuthState {
   const factory AuthState.initial() = AutenticationInitialState;
   const factory AuthState.loading() = AutenticationLoadingState;
   const factory AuthState.error(NetworkExceptions exception) = AutenticationErrorState;
-  const factory AuthState.loaded({required User user}) = AutenticationLoadedState;
+  const factory AuthState.loaded({required UserModel user}) = AutenticationLoadedState;
 }

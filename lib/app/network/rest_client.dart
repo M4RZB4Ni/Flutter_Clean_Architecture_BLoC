@@ -2,7 +2,7 @@
 
 import 'dart:convert';
 
-import 'package:flutter_clean_architecture_bloc/app/enums.dart';
+import 'package:flutter_clean_architecture_bloc/app/global_data/enums.dart';
 import 'package:flutter_clean_architecture_bloc/app/messages/printers.dart';
 import 'package:http/http.dart' as http;
 

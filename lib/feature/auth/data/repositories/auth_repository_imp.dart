@@ -10,7 +10,7 @@ class AuthRepositoryImpl implements AuthRepository {
   AuthRepositoryImpl(this._remoteDataSource);
 
   @override
-  Future<Either<NetworkExceptions, User>> login({required User user}) {
+  Future<Either<NetworkExceptions, UserModel>> login({required UserModel user}) {
     return _remoteDataSource.loginUser(
       user: user,
     );

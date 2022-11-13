@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture_bloc/app/base_view.dart';
+import 'package:flutter_clean_architecture_bloc/app/base/base_view.dart';
 import 'package:flutter_clean_architecture_bloc/app/messages/app_messages.dart';
+import 'package:flutter_clean_architecture_bloc/app/resources/app_size.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_event.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_state.dart';
 import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/widgets/app_textfield.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 
@@ -29,7 +31,7 @@ class AuthPage extends BaseView{
           obscureText: true,
           key: const Key('password-field'),
         ),
-        const SizedBox(height: 16.0),
+         SizedBox(height: AppSize.s16.r),
         BlocConsumer<AuthBloc, AuthState>(
           listener: (context, state) {
             if (state is AutenticationErrorState) {
@@ -59,21 +61,22 @@ class AuthPage extends BaseView{
             }
 
             return SizedBox(
-              height: 54.0,
-              width: 180.0,
+              height:AppSize.s54.r,
+              width: AppSize.s180.r,
               child: ElevatedButton(
                 key: const Key('login-button'),
                 style: const ButtonStyle(),
                 onPressed: () {
                   context.read<AuthBloc>().add(
                     AuthEvent.onLoginTapped(
-                      user: User(
+                      user: UserModel(
                         username: BlocProvider.of<AuthBloc>(context).emailController.text,
                         password: BlocProvider.of<AuthBloc>(context).passwordController.text,
                       ),
                     ),
                   );
                 },
+
                 child: const Text(
                   APPMessages.login,
                 ),
@@ -89,7 +92,7 @@ class AuthPage extends BaseView{
   PreferredSizeWidget? appBar(BuildContext context) {
     return AppBar(
       title: const Text(
-        'Authentication Screen',
+      APPMessages.authScreen
       ),
     );
   }

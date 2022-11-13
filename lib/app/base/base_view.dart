@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-import 'resources/app_color_extension.dart';
+import '../resources/app_color_extension.dart';
 
 abstract class BaseView extends StatelessWidget{
    BaseView({super.key});

@@ -9,11 +9,11 @@ class AuthUseCase{
 
   final AuthRepository _authRepository;
 
-  Future<Either<NetworkExceptions, User>> login({required User user}) async {
+  Future<Either<NetworkExceptions, UserModel>> login({required UserModel user}) async {
     var response= await _authRepository.login(user: user);
     if(response.isRight())
       {
-        final remoteUser = response.getOrElse(() => const User());
+        final remoteUser = response.getOrElse(() => const UserModel());
         await AuthStorageService.to.saveToken(remoteUser.token);
         await AuthStorageService.to.saveToken(remoteUser.token);
       }

@@ -3,5 +3,5 @@ import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_mo
 
 
 abstract class AuthRepository {
-  Future<Either<NetworkExceptions, User>> login({required User user});
+  Future<Either<NetworkExceptions, UserModel>> login({required UserModel user});
 }

@@ -5,15 +5,15 @@ import 'package:flutter_clean_architecture_bloc/app/network/network_boiler.dart'
 import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
 
 abstract class AuthRemoteDataSource {
-  Future<Either<NetworkExceptions, User>> loginUser({required User user});
+  Future<Either<NetworkExceptions, UserModel>> loginUser({required UserModel user});
 }
 
 class AuthRemoteDataSourceImp implements AuthRemoteDataSource {
   final RestClient _restClient;
   AuthRemoteDataSourceImp(this._restClient);
   @override
-  Future<Either<NetworkExceptions, User>> loginUser(
-      {required User user}) async {
+  Future<Either<NetworkExceptions, UserModel>> loginUser(
+      {required UserModel user}) async {
     try {
       final result = await _restClient.sendRequest(
         '/login',
@@ -21,7 +21,7 @@ class AuthRemoteDataSourceImp implements AuthRemoteDataSource {
         params: user.toJson(),
       );
       if (result.statusCode == 200) {
-        return Right(User.fromJson(jsonDecode(result.body)));
+        return Right(UserModel.fromJson(jsonDecode(result.body)));
       }
       return Left(NetworkExceptions.handleResponse(result.statusCode));
     } on HttpException catch (e) {

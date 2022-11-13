@@ -6,11 +6,11 @@ import 'package:flutter_clean_architecture_bloc/feature/home/presentation/bloc/h
 import 'package:flutter_clean_architecture_bloc/feature/home/presentation/bloc/home_state.dart';
 
 
-class HomepageBloc extends Bloc<HomeEvent, HomeState> {
+class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final GetLocalUserUseCase _getLocalUserUseCase;
   final GetProductsFromServer _getProductsFromServer;
 
-  HomepageBloc(this._getProductsFromServer,this._getLocalUserUseCase) : super(const HomeInitialState()) {
+  HomeBloc(this._getProductsFromServer,this._getLocalUserUseCase) : super(const HomeInitialState()) {
     on<HomeFetchDataEvent>(
           (event, emit) async {
         emit(const HomeState.loading());

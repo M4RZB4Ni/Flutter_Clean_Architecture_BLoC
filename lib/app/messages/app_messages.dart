@@ -6,4 +6,5 @@ class APPMessages{
   static const String authScreen='Authentication Screen';
   static const String parseError='Unable Parse Data Model';
   static const String parseFailHome='Parsing failure occurred in HomepageLocalDataSourceImlp';
+  static const String homepage='Homepage';
 }

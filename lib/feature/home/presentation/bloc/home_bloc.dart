@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/data/models/user_model.dart';
 import 'package:flutter_clean_architecture_bloc/feature/home/domain/use_cases/get_local_user.dart';
 import 'package:flutter_clean_architecture_bloc/feature/home/domain/use_cases/get_products.dart';
 import 'package:flutter_clean_architecture_bloc/feature/home/presentation/bloc/home_event.dart';

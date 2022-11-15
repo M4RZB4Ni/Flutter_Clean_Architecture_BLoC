@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/data/models/user_model.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({Key? key, required this.user}) : super(key: key);

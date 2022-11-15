@@ -1,5 +1,5 @@
 import 'package:flutter_clean_architecture_bloc/app/network/network_boiler.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/data/models/user_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'auth_state.freezed.dart';

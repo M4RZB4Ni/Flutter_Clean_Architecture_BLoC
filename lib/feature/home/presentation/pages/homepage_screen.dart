@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean_architecture_bloc/app/base/base_view.dart';
 import 'package:flutter_clean_architecture_bloc/app/messages/app_messages.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/data/models/user_model.dart';
 import 'package:flutter_clean_architecture_bloc/feature/home/presentation/bloc/home_bloc.dart';
 import 'package:flutter_clean_architecture_bloc/feature/home/presentation/bloc/home_event.dart';
 import 'package:flutter_clean_architecture_bloc/feature/home/presentation/bloc/home_state.dart';

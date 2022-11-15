@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/domain/use_cases/auth_usecase.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_event.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_state.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/domain/use_cases/auth_usecase.dart';
+
+import 'auth_event.dart';
+import 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthUseCase _authUseCase;

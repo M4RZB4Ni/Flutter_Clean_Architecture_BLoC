@@ -3,11 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean_architecture_bloc/app/base/base_view.dart';
 import 'package:flutter_clean_architecture_bloc/app/messages/app_messages.dart';
 import 'package:flutter_clean_architecture_bloc/app/resources/app_size.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/data/models/user_model.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_bloc.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_event.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/bloc/auth_state.dart';
-import 'package:flutter_clean_architecture_bloc/feature/auth/presentation/widgets/app_textfield.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/data/models/user_model.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/presentation/bloc/auth/auth_bloc.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/presentation/bloc/auth/auth_event.dart';
+import 'package:flutter_clean_architecture_bloc/feature/landing/presentation/bloc/auth/auth_state.dart';
+
+import 'package:flutter_clean_architecture_bloc/feature/landing/presentation/widgets/app_textfield.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
